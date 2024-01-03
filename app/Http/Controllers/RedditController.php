@@ -14,10 +14,10 @@ class RedditController extends Controller
         $this->redditService = $redditService;
     }
 
-    public function getPosts($subreddit, FirebaseController $firebase)
+    public function getPosts($subreddit, $category, FirebaseController $firebase)
     {
         // Get posts from RedditService
-        $posts = $this->redditService->getPosts($subreddit);
+        $posts = $this->redditService->getPosts($subreddit, $category);
         // Store posts in firebase
         $store = $firebase->setRedditData($posts);
         // return success message

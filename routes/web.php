@@ -23,4 +23,4 @@ Route::get('/', function () {
 Route::get('/', [FirebaseController::class,'getRedditData']);
 
 // reddit routes
-Route::get('/reddit/{subreddit}', [RedditController::class, 'getPosts']);
+Route::get('/reddit/{subreddit}/{category}', [RedditController::class, 'getPosts']);

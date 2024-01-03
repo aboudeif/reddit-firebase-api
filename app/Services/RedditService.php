@@ -15,14 +15,14 @@ class RedditService
         
     }
 
-    public function getPosts($subreddit)
+    public function getPosts($subreddit, $category)
     {
         // Fetch Reddit API credentials from environment variables
         $clientId = env('REDDIT_CLIENT_ID', '/reddit-firebase.json');
         $clientSecret = env('REDDIT_CLIENT_SECRET');
 
         // Make HTTP request to Reddit API
-        $response = Http::get("https://www.reddit.com/r/$subreddit.json", [
+        $response = Http::get("https://www.reddit.com/r/$subreddit/$category.json", [
             'client_id' => $clientId,
             'client_secret' => $clientSecret,
         ]);
