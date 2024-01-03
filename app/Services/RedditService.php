@@ -8,8 +8,6 @@ use Kreait\Laravel\Firebase\Facades\Firebase;
 
 class RedditService
 {
-    // protected $clientId = 'fcIrQlfxsRyP_t9W2gak3w';
-    // protected $clientSecret = 'kfLdbVyZS_4ay-HPbyW2roV5ddBvyw';
     protected $firestore;
 
     public function __construct()
