@@ -56,11 +56,11 @@ php artisan serve
 
 2. Access the routes:
 
-Firebase Data: http://localhost:8000/
-Reddit Posts (replace {subreddit} with the desired subreddit):
-Hot Posts: http://localhost:8000/reddit/{subreddit}/hot
-New Posts: http://localhost:8000/reddit/{subreddit}/new
-Rising Posts: http://localhost:8000/reddit/{subreddit}/rising
+- Firebase Data: http://localhost:8000/
+- Reddit Posts (replace {subreddit} with the desired subreddit):
+  - Hot Posts: http://localhost:8000/reddit/{subreddit}/hot
+  - New Posts: http://localhost:8000/reddit/{subreddit}/new
+  - Rising Posts: http://localhost:8000/reddit/{subreddit}/rising
 
 ## Customization
 Feel free to customize the controllers, services, and views to match your specific requirements. Add error handling, logging, and other features as needed.
