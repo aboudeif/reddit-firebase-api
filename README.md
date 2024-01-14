@@ -29,7 +29,6 @@ Place your Firebase service account key file (json format) in "/storage/app/" di
 
 4. Set Firebase credentials in the .env file:
 
-makefile
 ```
 FIREBASE_DATABASE_URL=your-firebase-database-url
 ```
@@ -51,7 +50,6 @@ After creating the app, you'll get a set of credentials:
  - Open your project's .env file.
  - Add the following lines and fill in the values you obtained from the Reddit Developer platform:
    
-makefile
 ```
 REDDIT_CLIENT_ID=your-client-id
 REDDIT_CLIENT_SECRET=your-client-secret
