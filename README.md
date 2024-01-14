@@ -1,6 +1,6 @@
 # Laravel Firebase Reddit API
 
-This Laravel application demonstrates how to create an API that requests and stores data in Firebase, and then displays the posts lists of the `/reddit/{subreddit}/{category}` using two routes: one for Firebase data and the other for Reddit posts.
+This Laravel application demonstrates how to create an API that requests and stores data in Firebase, and then displays the posts lists of the `/api/v1/reddit/{subreddit}/{category}` using two routes: one for Firebase data and the other for Reddit posts.
 
 ## Prerequisites
 
@@ -25,26 +25,25 @@ composer install
 ```
 3. Configure Firebase:
 
-Place your Firebase service account key file (json format) in the config directory.
+Place your Firebase service account key file (json format) in "/storage/app/" directory.
 
 4. Set Firebase credentials in the .env file:
 
 makefile
 ```
-FIREBASE_CREDENTIALS=your-service-account-key.json
 FIREBASE_DATABASE_URL=your-firebase-database-url
 ```
 
 5. Retrieve data from Firebase:
 
 ```php
-Route::get('/', [FirebaseController::class, 'getRedditData']);
+Route::get('/api/v1/', [FirebaseController::class, 'getRedditData']);
 ```
 
 6. Retrieve posts from a specific subreddit with a specific category (hot, new, rising):
 
 ```php
-Route::get('/reddit/{subreddit}/{category}', [RedditController::class, 'getPosts']);
+Route::get('/api/v1/reddit/{subreddit}/{category}', [RedditController::class, 'getPosts']);
 ```
 
 ## Usage
@@ -56,11 +55,11 @@ php artisan serve
 
 2. Access the routes:
 
-- Firebase Data: http://localhost:8000/
+- Firebase Data: http://localhost:8000/api/v1/
 - Reddit Posts (replace {subreddit} with the desired subreddit):
-  - Hot Posts: http://localhost:8000/reddit/{subreddit}/hot
-  - New Posts: http://localhost:8000/reddit/{subreddit}/new
-  - Rising Posts: http://localhost:8000/reddit/{subreddit}/rising
+  - Hot Posts: http://localhost:8000/api/v1/reddit/{subreddit}/hot
+  - New Posts: http://localhost:8000/api/v1/reddit/{subreddit}/new
+  - Rising Posts: http://localhost:8000/api/v1/reddit/{subreddit}/rising
 
 ## Customization
 Feel free to customize the controllers, services, and views to match your specific requirements. Add error handling, logging, and other features as needed.
