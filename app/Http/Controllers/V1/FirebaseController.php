@@ -15,7 +15,7 @@ class FirebaseController extends Controller
     public function __construct()
     {
         $this->firebase = (new Factory)
-            ->withServiceAccount(__DIR__ . '/reddit-firebase.json')
+            ->withServiceAccount(storage_path('app/reddit-firebase.json'))
             ->withDatabaseUri(env('FIREBASE_DATABASE_URL'));
         $this->database = $this->firebase->createDatabase();
     }
