@@ -35,21 +35,21 @@ FIREBASE_DATABASE_URL=your-firebase-database-url
 ```
 5. Create a Reddit Developer Account and Application:
 
- . Go to the Reddit Developer Platform.
- . Log in with your Reddit account or create a new one.
- . Click on the "Create App" or "Create Another App" button.
- . Fill out the required information for your new application (name, description, app type, etc.).
- . Set the redirect URI. For a Laravel project running locally, you can use http://localhost:8000/callback (adjust the port as needed).
+ - Go to the Reddit Developer Platform.
+ - Log in with your Reddit account or create a new one.
+ - Click on the "Create App" or "Create Another App" button.
+ - Fill out the required information for your new application (name, description, app type, etc.).
+ - Set the redirect URI. For a Laravel project running locally, you can use http://localhost:8000/callback (adjust the port as needed).
    
 6. Get Reddit API Credentials:
 
 After creating the app, you'll get a set of credentials:
- . Client ID (under the app name)
- . Client Secret (click the "edit" button to reveal it)
+ - Client ID (under the app name)
+ - Client Secret (click the "edit" button to reveal it)
 
 7. Set Environment Variables:
- . Open your project's .env file.
- . Add the following lines and fill in the values you obtained from the Reddit Developer platform:
+ - Open your project's .env file.
+ - Add the following lines and fill in the values you obtained from the Reddit Developer platform:
    
 makefile
 ```
