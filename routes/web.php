@@ -1,8 +1,5 @@
 <?php
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FirebaseController;
-use App\Http\Controllers\RedditController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +11,3 @@ use App\Http\Controllers\RedditController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-// firebase routes
-Route::get('/', [FirebaseController::class,'getRedditData']);
-
-// reddit routes
-Route::get('/reddit/{subreddit}/{category}', [RedditController::class, 'getPosts']);

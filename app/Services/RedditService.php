@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Http\Controllers\FirebaseController;
+use App\Http\Controllers\V1\FirebaseController;
 use Illuminate\Support\Facades\Http;
 use Kreait\Laravel\Firebase\Facades\Firebase;
 
@@ -47,7 +47,5 @@ class RedditService
         // Store posts in Firebase Firestore under 'reddit_data' collection
         $firebase = new FirebaseController;
         $firebase->setRedditData($posts);
-        // $document = $this->firestore->database()->collection('reddit_data')->document($subreddit);
-        // $document->set(['posts' => $posts]);
     }
 }

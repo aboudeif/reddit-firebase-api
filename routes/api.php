@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+namespace App\Http\Controllers\V1;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::prefix('v1')->group(function () {
+
+
+    // firebase routes
+    Route::get('/', [FirebaseController::class,'getRedditData']);
+    
+    // reddit routes
+    Route::get('/reddit/{subreddit}/{category}', [RedditController::class, 'getPosts']);
+    
 });

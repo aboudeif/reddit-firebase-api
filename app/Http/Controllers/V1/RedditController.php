@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\V1;
 
 use App\Services\RedditService;
-use App\Http\Controllers\FirebaseController;
 
 class RedditController extends Controller
 {
